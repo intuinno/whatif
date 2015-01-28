@@ -1,0 +1,72 @@
+<head>
+  <title>swiper-test</title>
+</head>
+
+<body>
+	{{> pageSwiper options=opts}}
+</body>
+
+<template name="layoutTemplate">
+	<div class="full-height flexbox column h-center v-center" data-ps="layout">
+		{{> page_yield}}
+	</div>
+	<div class="page-footer"><em>This is location {{location}}</em></div>
+</template>
+
+<template name="page">
+	<h1 class="centered header">{{heading}}</h1>
+	<h3 class="centered subheader">{{subheading}}</h3>
+	{{#if message}}
+		<p>{{message}}</p>
+	{{/if}}
+	{{#if bullets}}
+		<div class="container gutter list">
+		{{#each bullets}}
+			<p><i class="fa fa-angle-double-right bullet"></i> {{this}}</p>
+		{{/each}}
+		</div>
+	{{/if}}
+</template>
+
+<template name="choice-page">
+	<h1 class="centered header">Now for the Meteoric bit...</h1>
+	{{#each people}}
+		<div class="flexbox pad-top v-center">
+			<div><div class="smallheader">{{name}}</div></div>
+			<div><div class="button" data-action="show-basic">Basic Info</div></div>
+			<div><div class="button" data-action="show-all">All Info</div></div>
+		</div>
+	{{/each}}
+</template>
+
+<template name="basic-info">
+	{{#with person}}
+		<h1 class="header">{{name}}</h1>
+		<h3 class="subheader">{{companyName}}</h3>
+		<h3 class="subheader">{{city}}</h3>
+	{{/with}}
+</template>
+
+<template name="all-info">
+	{{#with person}}
+		<h1 class="header">{{name}}</h1>
+		<div class="flexbox pad-top">
+			<div><img src="{{avatar}}"></div>
+			<div>
+				<div class="smallheader">{{phone}}</div>
+				<div class="smallheader">{{email}}</div>
+			</div>
+		</div>
+		<h3 class="centered smallheader">{{companyName}} - <em>{{companyCatchPhrase}}</em></h3>
+		<h3 class="smallheader">{{street}}, {{city}} ({{zipcode}})</h3>
+	{{/with}}
+</template>
+
+<template name="moveable-buttons">
+	<h1 class="header">Enable and disable swiping</h1>
+	<div class="flexbox pad-top">
+		<div><div class="button" data-action="enable-swipe" data-direction="left">Left <i class="fa {{canMoveIcon 'left'}}"></i></div></div>
+		<div><div class="button" data-action="enable-swipe" data-direction="down">Down <i class="fa {{canMoveIcon 'down'}}"></i></div></div>
+		<div><div class="button" data-action="enable-swipe" data-direction="right">Right <i class="fa {{canMoveIcon 'right'}}"></i></div></div>
+	</div>
+</template>

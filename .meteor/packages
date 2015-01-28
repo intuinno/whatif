@@ -5,6 +5,12 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
-richsilv:page-slider
+stevezhu:sass
+wolves:bourbon
+richsilv:page-swiper
+fortawesome:fontawesome
+meteorhacks:npm
+
+
+npm-container
+reactive-var
