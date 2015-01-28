@@ -121,8 +121,17 @@ configuration = [
       bullets: [
         'Is it potentially useful?',
         'What else should it be doing?',
-        'Specifically, is there something ISOMORPHIC it should be doing?'
+        'Specifically, is there something <em>isomorphic</em> it should be doing?'
       ]
+    }
+  },
+  {
+    location: [8, 1],
+    seedTemplate: 'page',
+    layoutClass: 'pagecol2',
+    moveable: null,
+    data: {
+      heading: 'https://github.com/richsilv/meteor-page-swiper<br>https://github.com/richsilv/swiper-demo',
     }
   }
 ];

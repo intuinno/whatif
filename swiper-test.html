@@ -14,10 +14,10 @@
 </template>
 
 <template name="page">
-	<h1 class="centered header">{{heading}}</h1>
-	<h3 class="centered subheader">{{subheading}}</h3>
+	<h1 class="centered header">{{{heading}}}</h1>
+	<h3 class="centered subheader">{{{subheading}}}</h3>
 	{{#if message}}
-		<p>{{message}}</p>
+		<p>{{{message}}}</p>
 	{{/if}}
 	{{#if bullets}}
 		<div class="container gutter list">
