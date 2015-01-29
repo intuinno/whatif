@@ -7,11 +7,10 @@
 meteor-platform
 stevezhu:sass
 wolves:bourbon
-richsilv:page-swiper
 fortawesome:fontawesome
 meteorhacks:npm
 
 
 npm-container
 reactive-var
-fastclick
+richsilv:page-swiper
