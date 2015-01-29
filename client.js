@@ -52,6 +52,7 @@ if (Meteor.isClient) {
     'click [data-action="enable-swipe"]': function (evt, tmp) {
       var direction = tmp.$(evt.currentTarget).data('direction'),
           moveable = this.subPage.moveable[direction];
+      console.log(tmp.$(evt.currentTarget).parents('#page-swiper'));
       this.subPage.setMoveable(direction, !moveable);
       this.subPage.ps.reposition();
       Template.instance().click.changed();

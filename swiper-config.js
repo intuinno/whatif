@@ -19,10 +19,10 @@ configuration = [
     data: {
       heading: 'Why?',
       bullets: [
-        'Genuine single-page site laid out in a grid',
-        'Swipe between pages',
-        'Simpler and more natural (but more limited) than Iron-Router solutions (e.g. Momentum)',
-        'More Meteoric than repurposing an existing front-end package'
+        'Single-page site laid out in a (potentially large) grid',
+        'Swipe between pages to effectively move the viewport',
+        'Simpler and more natural (but more limited) than Iron-Router solutions (e.g. Momentum, Meteor-Transitioner)',
+        'More Meteoric than repurposing an existing front-end package (e.g. fullpage.js)'
       ]
     }
   },
@@ -49,7 +49,7 @@ configuration = [
     },
     data: {
       heading: "Secondary direction is vertical",
-      subheading: '...and I might add the option to reverse these'
+      subheading: '(seems more natural this way)'
     }
   },
   {
@@ -61,9 +61,9 @@ configuration = [
     data: {
       heading: 'Easy to customise the appearance',
       bullets: [
-        'Specify CSS classes to be added to each page',
-        'Custom arrow colours',
-        'Layout template (see bottom-right)'
+        'Layout templates (see bottom-right)',
+        'Custom CSS classes to be added to each page',
+        'Specify arrow colours',
       ]
     },
     arrowCol: 'green'
