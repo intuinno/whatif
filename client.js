@@ -22,6 +22,12 @@ if (Meteor.isClient) {
     }
   });
 
+  Template['enter-name'].helpers({
+    people: function () {
+      return People.find({}, {limit: 3});
+    }
+  });
+
   Template['choice-page'].helpers({
     people: function () {
       return People.find({}, {limit: 3});
